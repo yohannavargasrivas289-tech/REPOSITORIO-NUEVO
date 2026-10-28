@@ -1,0 +1,460 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    background-color: #0b0b0b;
+    color: rgba(222, 13, 13, 0.963);
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+header {
+    background-color: #000000;
+    padding: 20px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    border-bottom: 1px solid #292929;
+}
+
+header h1 {
+    font-size: 25px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #1d67a4;
+}
+
+
+/* =========================
+   INICIO
+========================= */
+
+.hero {
+    min-height: 600px;
+
+    padding: 70px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+.hero-text {
+    max-width: 550px;
+}
+
+.small-title {
+    color: #189cc1;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #bbbbbb;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.hero img {
+    width: 48%;
+    border-radius: 20px;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.main-button {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 14px 25px;
+
+    background-color: #2195f3b3;
+
+    color: rgb(231, 226, 226);
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    transform: translateY(-3px);
+    background-color: #1089edc3;
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+section {
+    padding: 80px 8%;
+}
+
+.section-title {
+    text-align: center;
+
+    font-size: 38px;
+
+    margin-bottom: 15px;
+}
+
+.section-text {
+    text-align: center;
+
+    color: #999999;
+
+    margin-bottom: 45px;
+}
+
+
+/* =========================
+   PRODUCT CARDS
+========================= */
+
+.card-container {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   CARD DE EQUIPOS
+========================= */
+
+.product-card {
+    width: 300px;
+
+    background-color: #171717;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    border: 1px solid #000000;
+
+    transition: 0.4s;
+}
+
+.product-card img {
+    width: 100%;
+
+    height: 190px;
+
+    object-fit: cover;
+
+    transition: 0.4s;
+}
+
+.card-info {
+    padding: 22px;
+}
+
+.card-info h3 {
+    font-size: 23px;
+
+    margin-bottom: 8px;
+}
+
+.short-info {
+    color: #1769ac;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   INFORMACIÓN OCULTA
+========================= */
+
+.extra-info {
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transition: 0.4s;
+}
+
+.extra-info p {
+    color: #cccccc;
+
+    margin-top: 10px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================
+   EFECTO PRODUCT CARD
+========================= */
+
+.product-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #cf1c1c;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-card:hover .extra-info {
+    max-height: 250px;
+
+    opacity: 1;
+}
+
+.product-card a {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    color: #2196f3;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.product-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   CARDS DE PILOTOS
+========================= */
+
+.driver-card {
+    width: 260px;
+
+    background-color: #171717;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    border: 1px solid #292929;
+
+    transition: 0.4s;
+}
+
+.driver-card img {
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    transition: 0.4s;
+}
+
+.driver-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #07bbedb8;
+}
+
+.driver-card:hover img {
+    transform: scale(1.05);
+}
+
+.driver-card:hover .extra-info {
+    max-height: 250px;
+
+    opacity: 1;
+}
+
+
+/* =========================
+   CARDS DE CARRERAS
+========================= */
+
+.race-card {
+    width: 300px;
+
+    background-color: #171717;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    border: 1px solid #000000;
+
+    transition: 0.4s;
+}
+
+.race-card img {
+    width: 100%;
+
+    height: 190px;
+
+    object-fit: cover;
+
+    transition: 0.4s;
+}
+
+.race-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #f4f4f4;
+}
+
+.race-card:hover img {
+    transform: scale(1.05);
+}
+
+.race-card:hover .extra-info {
+    max-height: 250px;
+
+    opacity: 1;
+}
+
+
+/* =========================
+   SECCIÓN OFICIAL
+========================= */
+
+.official {
+    text-align: center;
+
+    background-color: #111111;
+}
+
+.official h2 {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.official p {
+    color: #aaaaaa;
+
+    max-width: 600px;
+
+    margin: auto;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #080808;
+
+    padding: 30px;
+
+    text-align: center;
+
+    color: #777777;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 50px;
+    }
+
+    .hero img {
+        width: 100%;
+    }
+/* ====================
+         VIDEO
+=======================*/
+
+}
+.video-v8 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.video-v8 video {
+    width: 80%;
+    max-width: 800px;
+} 
+
+.audio-f1 {
+    text-align: center;
+    margin-top: 20px;
+}
